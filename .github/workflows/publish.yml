@@ -16,7 +16,7 @@ jobs:
   publish:
     name: Publish to PyPI
     needs: test
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-24.04
     environment:
       name: pypi
       url: https://pypi.org/p/bekci
