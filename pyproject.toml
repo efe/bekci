@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bekci"
+description = "An opinionated flake8 plugin with Python linter rules."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+dependencies = ["flake8>=6"]
+dynamic = ["version"]
+
+[project.entry-points."flake8.extension"]
+BEK = "bekci:Plugin"
+
+[tool.setuptools.packages.find]
+include = ["bekci*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "bekci.__version__" }
