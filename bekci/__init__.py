@@ -1,6 +1,6 @@
 """Flake8 plugin entry point for bekci."""
 
-__version__ = "0.1.1"
+__version__ = "0.1.3"
 
 from .plugin import Plugin
 
